@@ -1,0 +1,8 @@
+export const projects = [
+  { title: "64-Element X-band AESA Pulse-Doppler Radar (Industry)", tags:["QTRM","Freq Converter","160 W","X-band"], desc:"Worked on QTRM and frequency converter unit; ensured spec compliance and supported TOT." },
+  { title: "SFCW Radar on UAV", tags:["RF chain","Signal imaging","2–3 cm resolution"], desc:"Implemented RF chain and processing for clutter suppression & accurate buried-object detection." },
+  { title: "Fluid-Driven Pattern Reconfigurable Antenna", tags:["10 GHz","CBSA","Mercury-filled PLA","12 dBi"], desc:"360° azimuth scan via cavity-backed slot with liquid posts; cone structures for enhanced directivity." },
+  { title: "GNSS Record/Replay & Simulation", tags:["GPS","BeiDou","bladeRF","Raspberry Pi"], desc:"Record/replay for L1/L2/L5 & B1/B2/B3; artificial baseband generation & system integration." },
+  { title: "Metal Detection via Proximity E-field Coupling", tags:["Microwave resonator","S12","-10 dB attenuation"], desc:"Circular patch sensor with open-stub; proximity coupling for sensitive metallic detection." },
+  { title: "X-band FMCW Radar Components", tags:["PLL Synth","Spec Analyzer","Layout"], desc:"Reduced signal degradation (~5%) with optimized layouts & control." }
+];
