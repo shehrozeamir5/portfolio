@@ -39,7 +39,7 @@ export default async function Page() {
         </div>
       </header>
 
-      <section className="hero" className="section">
+      <section id="home" className="hero section">
         <div className="grid hero-grid">
           <div>
             <h1 className="title">Hi, I’m Shehroze</h1>
