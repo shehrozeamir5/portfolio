@@ -39,7 +39,7 @@ export default async function Page() {
         </div>
       </header>
 
-      <section className="hero">
+      <section className="hero" className="section">
         <div className="grid hero-grid">
           <div>
             <h1 className="title">Hi, I’m Shehroze</h1>
@@ -76,7 +76,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="experience">
+      <section id="experience" className="section">
         <h2>Experience</h2>
         <div className="cards">
           <div className="card" style={{gridColumn:'span 6'}}>
@@ -103,7 +103,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="research" style={{marginTop:28}}>
+      <section id="research" style={{marginTop:28}} className="section">
         <h2>Research</h2>
         <div className="cards">
           <div className="card" style={{gridColumn:'span 4'}}>
@@ -121,7 +121,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="projects" style={{marginTop:28}}>
+      <section id="projects" style={{marginTop:28}} className="section">
         <h2>Selected Projects</h2>
         <div className="cards">
           {projects.map((p:any) => (
@@ -133,7 +133,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="publications" style={{marginTop:28}}>
+      <section id="publications" style={{marginTop:28}} className="section">
         <h2>Publications</h2>
         <div className="cards">
           <div className="card" style={{gridColumn:'span 4'}}><div className="head"><h3>Fluid‑Driven Pattern Reconfigurable Antenna With Cavity‑Backed Slot</h3><div className="muted">IEEE T-AP (Working)</div></div><div className="body"><div className="muted">Awab Muhammad, Shehroze Amir, Adnan Nadeem, M. U. Khan, R. K. Arya, P. Chaudhary, R. Mittra</div></div></div>
@@ -142,7 +142,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="education" style={{marginTop:28}}>
+      <section id="education" style={{marginTop:28}} className="section">
         <h2>Education</h2>
         <div className="cards">
           <div className="card" style={{gridColumn:'span 6'}}><div className="head"><h3>University of Calgary</h3><div className="muted">MSc, Electrical Engineering · Aug 2025 – Jun 2027</div></div><div className="body"><div className="muted">Supervisor: Prof. F. M. Ghannouchi</div></div></div>
@@ -150,7 +150,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="contact" style={{margin:'28px 0 8px'}}>
+      <section id="contact" style={{margin:'28px 0 8px'}} className="section">
         <h2>Contact</h2>
         <div className="card"><div className="body" style={{display:'flex',gap:12,flexWrap:'wrap',alignItems:'center'}}>
           <a className="btn btn-outline" href="mailto:shehrozeamir5@gmail.com">Email</a>
