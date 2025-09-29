@@ -1,4 +1,3 @@
-
 import { headers } from 'next/headers';
 
 function absoluteUrl(path = '') {
@@ -16,6 +15,7 @@ async function fetchProjects() {
 
 export default async function Page() {
   const projects = await fetchProjects();
+
   return (
     <main id="home" className="container">
       <header>
@@ -39,6 +39,7 @@ export default async function Page() {
         </div>
       </header>
 
+      {/* HERO */}
       <section id="home" className="hero section">
         <div className="grid hero-grid">
           <div>
@@ -51,7 +52,7 @@ export default async function Page() {
             <div style={{display:'flex',gap:8,flexWrap:'wrap',marginTop:16}}>
               <span className="pill">Calgary, AB, Canada</span>
               <a className="pill" href="mailto:shehrozeamir5@gmail.com">shehrozeamir5@gmail.com</a>
-              <a className="pill" href="tel:+18258827555">+1 (825) 882‑7555</a>
+              <a className="pill" href="tel:+18258827555">+1 (825) 882-7555</a>
             </div>
           </div>
           <div>
@@ -76,26 +77,27 @@ export default async function Page() {
         </div>
       </section>
 
+      {/* EXPERIENCE */}
       <section id="experience" className="section">
         <h2>Experience</h2>
         <div className="cards">
           <div className="card" style={{gridColumn:'span 6'}}>
-            <div className="head"><h3>Hardware Design Engineer · <span className="muted">Electro‑dynamic Systems (EDS)</span></h3><div className="muted" style={{fontSize:14}}>Jun 2023 – Jul 2025 · NSTP, Islamabad</div></div>
+            <div className="head"><h3>Hardware Design Engineer · <span className="muted">Electro-dynamic Systems (EDS)</span></h3><div className="muted" style={{fontSize:14}}>Jun 2023 – Jul 2025 · NSTP, Islamabad</div></div>
             <div className="body">
               <ul>
-                <li>Project lead: Ku‑band SATCOM phased array design & development.</li>
-                <li>QTRM + frequency converter unit for 160 W, 64‑element X‑band AESA pulse‑Doppler radar; supported technology transfer (TOT).</li>
-                <li>X‑band FMCW radar components (PLL synthesizer, spectrum analyzer) with ~5% reduction in signal degradation.</li>
-                <li>Implemented MUSIC DOA on ZCU‑104+ FPGA & AD9361; extended detection to 6 GHz.</li>
-                <li>Synchronized multi‑chip ADRV9002 transceivers for phase & delay alignment across channels.</li>
+                <li>Project lead: Ku-band SATCOM phased array design & development.</li>
+                <li>QTRM + frequency converter unit for 160 W, 64-element X-band AESA pulse-Doppler radar; supported technology transfer (TOT).</li>
+                <li>X-band FMCW radar components (PLL synthesizer, spectrum analyzer) with ~5% reduction in signal degradation.</li>
+                <li>Implemented MUSIC DOA on ZCU-104+ FPGA & AD9361; extended detection to 6 GHz.</li>
+                <li>Synchronized multi-chip ADRV9002 transceivers for phase & delay alignment across channels.</li>
               </ul>
             </div>
           </div>
           <div className="card" style={{gridColumn:'span 6'}}>
-            <div className="head"><h3>Research Engineer (Part‑time) · <span className="muted">Fusion Technologies</span></h3><div className="muted" style={{fontSize:14}}>Jan 2025 – Aug 2025 · Remote (UK)</div></div>
+            <div className="head"><h3>Research Engineer (Part-time) · <span className="muted">Fusion Technologies</span></h3><div className="muted" style={{fontSize:14}}>Jan 2025 – Aug 2025 · Remote (UK)</div></div>
             <div className="body">
               <ul>
-                <li>Time‑tagger photon counting for laser scanning microscopy; frequency stability using modified Allan deviation.</li>
+                <li>Time-tagger photon counting for laser scanning microscopy; frequency stability using modified Allan deviation.</li>
                 <li>Validated algorithms on Xilinx ZCU111 RFSoC.</li>
               </ul>
             </div>
@@ -103,16 +105,17 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="research" style={{marginTop:28}} className="section">
+      {/* RESEARCH */}
+      <section id="research" className="section">
         <h2>Research</h2>
         <div className="cards">
           <div className="card" style={{gridColumn:'span 4'}}>
             <div className="head"><h3>iRadio Lab, University of Calgary</h3><div className="muted" style={{fontSize:14}}>Graduate Researcher (Advisor: Prof. F. M. Ghannouchi)</div><div className="muted" style={{fontSize:12}}>Aug 2025 – Present</div></div>
-            <div className="body"><ul><li>Programming ZCU216 RFSoC</li><li>NN‑based DPD: PA modeling & linearization</li></ul></div>
+            <div className="body"><ul><li>Programming ZCU216 RFSoC</li><li>NN-based DPD: PA modeling & linearization</li></ul></div>
           </div>
           <div className="card" style={{gridColumn:'span 4'}}>
             <div className="head"><h3>AEEL Lab (KSA)</h3><div className="muted" style={{fontSize:14}}>Researcher (Advisor: Dr. Muhammad Amin)</div><div className="muted" style={{fontSize:12}}>Jun 2023 – Aug 2025</div></div>
-            <div className="body"><ul><li>EIT resonator for passive beam steering at sub‑THz.</li><li>Anomalous Phase Detection for GPR; calibrated phase‑slope double‑shift near antenna resonance.</li></ul></div>
+            <div className="body"><ul><li>EIT resonator for passive beam steering at sub-THz.</li><li>Anomalous Phase Detection for GPR; calibrated phase-slope double-shift near antenna resonance.</li></ul></div>
           </div>
           <div className="card" style={{gridColumn:'span 4'}}>
             <div className="head"><h3>TUIL Virtual Research Lab</h3><div className="muted" style={{fontSize:14}}>Research Engineer (Advisor: Dr. Nosherwan Shoaib)</div><div className="muted" style={{fontSize:12}}>Jun 2024 – Jun 2025</div></div>
@@ -121,28 +124,31 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="projects" style={{marginTop:28}} className="section">
+      {/* PROJECTS */}
+      <section id="projects" className="section">
         <h2>Selected Projects</h2>
         <div className="cards">
-          {projects.map((p:any) => (
+          {projects.map((p: any) => (
             <div className="card" style={{gridColumn:'span 4'}} key={p.title}>
               <div className="head"><h3>{p.title}</h3></div>
-              <div className="body"><p className="muted">{p.desc}</p><div>{p.tags.map((t:string)=>(<span className="badge" key={t}>{t}</span>))}</div></div>
+              <div className="body"><p className="muted">{p.desc}</p><div>{p.tags.map((t: string)=>(<span className="badge" key={t}>{t}</span>))}</div></div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="publications" style={{marginTop:28}} className="section">
+      {/* PUBLICATIONS */}
+      <section id="publications" className="section">
         <h2>Publications</h2>
         <div className="cards">
-          <div className="card" style={{gridColumn:'span 4'}}><div className="head"><h3>Fluid‑Driven Pattern Reconfigurable Antenna With Cavity‑Backed Slot</h3><div className="muted">IEEE T-AP (Working)</div></div><div className="body"><div className="muted">Awab Muhammad, Shehroze Amir, Adnan Nadeem, M. U. Khan, R. K. Arya, P. Chaudhary, R. Mittra</div></div></div>
+          <div className="card" style={{gridColumn:'span 4'}}><div className="head"><h3>Fluid-Driven Pattern Reconfigurable Antenna With Cavity-Backed Slot</h3><div className="muted">IEEE T-AP (Working)</div></div><div className="body"><div className="muted">Awab Muhammad, Shehroze Amir, Adnan Nadeem, M. U. Khan, R. K. Arya, P. Chaudhary, R. Mittra</div></div></div>
           <div className="card" style={{gridColumn:'span 4'}}><div className="head"><h3>Anomalous Phase Detection in Monostatic GPR Sensing</h3><div className="muted">Nature Communications (Submitted)</div></div><div className="body"><div className="muted">S. Amir, M. Amin, O. Siddiqui, T. Almoneef</div></div></div>
-          <div className="card" style={{gridColumn:'span 4'}}><div className="head"><h3>A ‘See‑Through’ Metallic Sensor via Proximity Resonant Coupling</h3><div className="muted">IEEE Sensors Journal (Submitted)</div></div><div className="body"><div className="muted">T. Almoneef, S. Amir, M. Amin, O. Siddiqui</div></div></div>
+          <div className="card" style={{gridColumn:'span 4'}}><div className="head"><h3>A ‘See-Through’ Metallic Sensor via Proximity Resonant Coupling</h3><div className="muted">IEEE Sensors Journal (Submitted)</div></div><div className="body"><div className="muted">T. Almoneef, S. Amir, M. Amin, O. Siddiqui</div></div></div>
         </div>
       </section>
 
-      <section id="education" style={{marginTop:28}} className="section">
+      {/* EDUCATION */}
+      <section id="education" className="section">
         <h2>Education</h2>
         <div className="cards">
           <div className="card" style={{gridColumn:'span 6'}}><div className="head"><h3>University of Calgary</h3><div className="muted">MSc, Electrical Engineering · Aug 2025 – Jun 2027</div></div><div className="body"><div className="muted">Supervisor: Prof. F. M. Ghannouchi</div></div></div>
@@ -150,19 +156,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="contact" style={{margin:'28px 0 8px'}} className="section">
+      {/* CONTACT */}
+      <section id="contact" className="section" style={{margin:'28px 0 8px'}}>
         <h2>Contact</h2>
-        <div className="card"><div className="body" style={{display:'flex',gap:12,flexWrap:'wrap',alignItems:'center'}}>
-          <a className="btn btn-outline" href="mailto:shehrozeamir5@gmail.com">Email</a>
-          <a className="btn btn-outline" href="tel:+18258827555">Call</a>
-          <a className="btn btn-outline" target="_blank" rel="noreferrer" href="https://github.com/shehrozeamir5">GitHub</a>
-          <a className="btn btn-outline" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/shehroze-amir-sheeri/">LinkedIn</a>
-          <a className="btn btn-outline" target="_blank" rel="noreferrer" href="https://scholar.google.com/citations?user=S605aWcAAAAJ&hl=en">Google Scholar</a>
-          <span className="muted" style={{marginLeft:'auto'}}>Open to research & industry collaborations.</span>
-        </div></div>
-      </section>
-
-      <div className="footer">© {new Date().getFullYear()} Shehroze Amir. All rights reserved.</div>
-    </main>
-  );
-}
+        <div className="card"><div className="body" style={{display:'flex',gap:12
